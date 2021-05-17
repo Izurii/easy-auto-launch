@@ -14,7 +14,7 @@ Auto-launch your app on login.
 - :star: Supports NW.js and Electron apps in Windows Store (with some caveats). 
 - :disappointed: Not Mac App Store friendly. See [Make this Mac App Store compatible](https://github.com/Teamwork/node-auto-launch/issues/43) for more information.
 
-
+As the original author of this package is not updating or making any fixes whatsoever I'll be taking this project.
 ## Usage
 
 ```javascript
