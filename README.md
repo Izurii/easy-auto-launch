@@ -1,7 +1,7 @@
-node-auto-launch
+easy-auto-launch
 ==============
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Windows Build Status][appveyor-image]][appveyor-url] [![Dependency Status][depstat-image]][depstat-url]
+[![NPM version][npm-image]][npm-url] [![Dependency Status][depstat-image]][depstat-url]
 
 ---
 
@@ -12,13 +12,16 @@ Auto-launch your app on login.
 - :star: Supports [NW.js](http://nwjs.io/) and [Electron](http://electron.atom.io/) (with or without Squirrel; i.e. even if you're using Electron's built-in [`autoUpdater`](http://electron.atom.io/docs/api/auto-updater/) API).
 - :star: Auto-detects your app path for NW.js and Electron apps.
 - :star: Supports NW.js and Electron apps in Windows Store (with some caveats). 
-- :disappointed: Not Mac App Store friendly. See [Make this Mac App Store compatible](https://github.com/Teamwork/node-auto-launch/issues/43) for more information.
+- :disappointed: Not Mac App Store friendly. See [Make this Mac App Store compatible](https://github.com/Izurii/easy-auto-launch/issues/43) for more information.
 
 As the original author of this package is not updating or making any fixes whatsoever I'll be taking this project.
+
+Link for the original repo: https://github.com/Izurii/easy-auto-launch
+
 ## Usage
 
 ```javascript
-var AutoLaunch = require('auto-launch');
+var AutoLaunch = require('easy-auto-launch');
 
 var minecraftAutoLauncher = new AutoLaunch({
 	name: 'Minecraft',
@@ -44,7 +47,7 @@ minecraftAutoLauncher.isEnabled()
 
 ## Installation
 
-`npm install --save auto-launch`
+`npm install --save easy-auto-launch`
 
 
 ## API
@@ -108,7 +111,7 @@ We execute an AppleScript command to instruct `System Events` to add or remove a
 
 ![Login Items screenshot](images/loginItemsScreenshot.png)
 
-Note: This is not Mac App Store friendly; if you use it in your app, it will be rejected by the Mac App Store. We're only 99% sure on this as we haven't actually tried ourselves. See [Make this Mac App Store compatible](https://github.com/Teamwork/node-auto-launch/issues/43) for more information.
+Note: This is not Mac App Store friendly; if you use it in your app, it will be rejected by the Mac App Store. We're only 99% sure on this as we haven't actually tried ourselves.
 
 
 #### Launch Agent
@@ -126,9 +129,9 @@ This is a file-based method like Linux's Desktop Entry method. We add a `.plist`
 - Your app will not appear in the user's Login Items. Therefore the user can only toggle auto-launching inside your app, if you provide them with a setting of course (which you should!). This is not a huge deal as most users are not aware of Login Items preferences, but it would be ideal if your app appeared there.
 - If the user was to remove your app, the file would be left behind on the user's machine.
 
-If you find that the AppleScript method doesn't work for you and this method does, please let us know by [creating an issue](https://github.com/Teamwork/node-auto-launch/issues/new).
+If you find that the AppleScript method doesn't work for you and this method does, please let us know by [creating an issue](https://github.com/Izurii/easy-auto-launch/issues/new).
 
-Note: This is not Mac App Store friendly; if you use it in your app, it will be rejected by the Mac App Store as this reaches outside of the app sandbox. See [Make this Mac App Store compatible](https://github.com/Teamwork/node-auto-launch/issues/43) for more information.
+Note: This is not Mac App Store friendly; if you use it in your app, it will be rejected by the Mac App Store as this reaches outside of the app sandbox. See [Make this Mac App Store compatible](https://github.com/Izurii/easy-auto-launch/issues/43) for more information.
 
 
 ### Windows
@@ -153,15 +156,11 @@ There is a way to bypass that - it will require you to know the developer ID, ap
 
 We're always open to your help and feedback. See our [CONTRIBUTING.md](CONTRIBUTING.md).
 
+[npm-url]: https://npmjs.org/package/easy-auto-launch
+[npm-image]: http://img.shields.io/npm/v/easy-auto-launch.svg?style=flat
 
-[npm-url]: https://npmjs.org/package/auto-launch
-[npm-image]: http://img.shields.io/npm/v/auto-launch.svg?style=flat
+[depstat-url]: https://david-dm.org/Izurii/easy-auto-launch
+[depstat-image]: https://david-dm.org/Izurii/easy-auto-launch.svg?style=flat
 
-[appveyor-url]: https://ci.appveyor.com/project/adam-lynch/node-auto-launch/branch/master
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/0sraxp65vrj2axc3/branch/master?svg=true
 
-[travis-url]: http://travis-ci.org/Teamwork/node-auto-launch
-[travis-image]: http://img.shields.io/travis/Teamwork/node-auto-launch.svg?style=flat
-
-[depstat-url]: https://david-dm.org/teamwork/node-auto-launch
-[depstat-image]: https://david-dm.org/teamwork/node-auto-launch.svg?style=flat
+## [Thanks for the original devs](https://github.com/Teamwork/)
