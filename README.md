@@ -12,11 +12,11 @@ Auto-launch your app on login.
 - :star: Supports [NW.js](http://nwjs.io/) and [Electron](http://electron.atom.io/) (with or without Squirrel; i.e. even if you're using Electron's built-in [`autoUpdater`](http://electron.atom.io/docs/api/auto-updater/) API).
 - :star: Auto-detects your app path for NW.js and Electron apps.
 - :star: Supports NW.js and Electron apps in Windows Store (with some caveats). 
-- :disappointed: Not Mac App Store friendly. See [Make this Mac App Store compatible](https://github.com/Izurii/easy-auto-launch/issues/43) for more information.
+- :disappointed: Not Mac App Store friendly. See [Make this Mac App Store compatible](https://github.com/Teamwork/node-auto-launch/issues/43) for more information.
 
 As the original author of this package is not updating or making any fixes whatsoever I'll be taking this project.
 
-Link for the original repo: https://github.com/Izurii/easy-auto-launch
+Link for the original repo: https://github.com/Teamwork/node-auto-launch
 
 ## Usage
 
