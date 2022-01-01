@@ -1,8 +1,8 @@
 {
 	"name": "easy-auto-launch",
-	"version": "6.0.1",
+	"version": "6.0.2",
 	"description": "Launch node applications or executables at login (Mac, Windows, and Linux)",
-	"main": "dist/index.js",
+	"main": "dist/easy-auto-launch.js",
 	"types": "dist/easy-auto-launch.d.ts",
 	"scripts": {
 		"build": "yarn run clean && yarn run tsc",

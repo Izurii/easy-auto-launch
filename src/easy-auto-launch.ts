@@ -3,7 +3,7 @@ import { AutoLaunchLinux } from "./AutoLaunchLinux";
 import { AutoLaunchMac } from "./AutoLaunchMac";
 import { AutoLaunchWindows } from "./AutoLaunchWindows";
 
-export default class AutoLaunch {
+module.exports = class AutoLaunch {
 
 	api: AutoLaunchLinux | AutoLaunchMac | AutoLaunchWindows | null;
 	options: {
