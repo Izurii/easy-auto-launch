@@ -1,12 +1,11 @@
-export type ConstructorType = {
+type ConstructorType = {
 	name: string;
 	isHidden?: boolean;
 	mac?: Object;
 	path?: string;
 }
-
-declare module 'easy-auto-launch' {
-	export class AutoLaunch {
+declare module "easy-auto-launch" {
+	class AutoLaunch {
 		constructor(options: ConstructorType);
 		enable(): Promise<void>;
 		disable(): Promise<void>;
@@ -14,4 +13,5 @@ declare module 'easy-auto-launch' {
 		fixLinuxExecPath(): Promise<void>;
 		fixOpts(): Promise<void>;
 	}
+	export = AutoLaunch;
 }
