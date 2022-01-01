@@ -3,7 +3,7 @@
 	"version": "6.0.0",
 	"description": "Launch node applications or executables at login (Mac, Windows, and Linux)",
 	"main": "dist/index.js",
-	"types": "src/index.d.ts",
+	"types": "easy-auto-launch.d.ts",
 	"scripts": {
 		"compile": "yarn run tsc"
 	},
