@@ -1,29 +1,28 @@
 name: "release"
 
 on:
-  push:
-    branches: [ master ]
+    push:
+        branches: [master]
 
 jobs:
-  release:
-    
-    name: Release Job
-    runs-on: ubuntu-latest
+    release:
+        name: Release Job
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v1
-    
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.16.0
-      
-      - name: Compile
-        run: |
-          yarn install
-		  yarn build
+        steps:
+            - name: Check out Git repository
+              uses: actions/checkout@v1
 
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+            - name: Install Node.js, NPM and Yarn
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 14.16.0
+
+            - name: Compile
+              run: |
+                  yarn install
+                  yarn build
+
+            - uses: JS-DevTools/npm-publish@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
